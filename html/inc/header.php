@@ -1,6 +1,5 @@
 <header class=" bg-image"
 style="background-image: url('https://assets.aboutamazon.com/dims4/default/4c30e45/2147483647/strip/true/crop/2500x1407+0+546/resize/1320x743!/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F6f%2F98%2Fb9a3b52d44dd9f7ed8692899094b%2Famazon-org-smile-extruded-sq.jpg');"
-
 >
     <!-- Intro settings -->
     <style>

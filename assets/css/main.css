@@ -97,10 +97,6 @@ header .titlel h5 {
   font-size: 2vw;
 }
 
-.progress {
-  margin-top: 40px;
-}
-
 .card-containere {
   margin-top: 40px;
   display: flex;
@@ -348,6 +344,18 @@ header .titlel h5 {
     width: 5.5vw;
     height: 5.5vw;
   }
+}
+
+#progressTime {
+  width: 100%;
+  background-color: grey;
+  margin-top: 30px;
+}
+
+#BarTime {
+  width: 0;
+  height: 30px;
+  background-color: green;
 }
 
 .quiz-body {

@@ -12,10 +12,10 @@
             </p>
         </div>
         <?php include_once '../layout/card.php'?>
+        <?php include_once '../layout/time-bar.php'?>
 
-        <div class="progress" style="height: 20px;">
-            <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
-        </div>
+        
+
     </section>
 
     
