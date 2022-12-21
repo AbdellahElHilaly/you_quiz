@@ -1,0 +1,15 @@
+@import 'sass/variables/colors';
+@import 'sass/variables/sizing';
+@import 'sass/helpers/mixin';
+@import '../css/sass/layout/footer';
+@import '../css/sass/layout/nav';
+@import '../css/sass/components/button';
+@import '../css/sass/layout/header';
+@import 'sass/pages/quiz';
+@import 'sass/components/quistion-title';
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}

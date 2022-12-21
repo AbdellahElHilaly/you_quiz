@@ -1,0 +1,12 @@
+.quistion-container {
+  text-align: center;
+  font-size: 2vw;
+  color: black;
+  font-family: monospace;
+  font-weight: bolder;
+}
+@media (max-width: 767px) {
+  .quistion-container {
+    color: white;
+  }
+}/*# sourceMappingURL=quistion-title.css.map */

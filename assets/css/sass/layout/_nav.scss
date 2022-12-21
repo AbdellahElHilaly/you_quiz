@@ -1,0 +1,21 @@
+@mixin style-nav {
+    color: $main-color;
+    font-size: 1.2em;
+    &:hover{
+        color: $color-primary;
+    }
+    &:focus{
+        color: $main-color;
+    }
+}
+
+nav{
+    background-color: $nav-color;
+    i{
+        @include style-nav;
+    }
+    .nav-link{
+        @include style-nav;
+    }
+}
+

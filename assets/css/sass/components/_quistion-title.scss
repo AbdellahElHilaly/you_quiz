@@ -1,0 +1,4 @@
+@import '../variables/sizing';
+.quistion-container{
+    @include text-style();
+}

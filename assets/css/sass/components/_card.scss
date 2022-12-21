@@ -1,0 +1,103 @@
+@import '../variables/colors';
+@import '../variables/sizing';
+.card-containere{
+    margin-top: $margin-top;
+    display: flex;
+    justify-content: space-between;
+    @media (max-width : $max-mobile) {
+        display: block;
+        text-align: center;
+    }
+    div{
+        position: relative;
+        iconify-icon{
+            position: absolute;
+            top: O;
+            right: 0;
+            margin-top: 3px;
+            margin-right: 3px;
+            font-size: 3vw;
+            color: black;
+            @media (max-width : $max-mobile) {
+                font-size: 7vw;
+            }
+        }
+    }
+}
+
+@mixin card-style($color , $border , $p-color){
+    width: 22vw;
+    height: $card-hieght;
+    border: 4px $border solid;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    background-color: $color;
+    &:hover{
+        background-color: darken($color: $color, $amount: 15%);
+    }
+    &:active{
+        background-color: darken($color: $color, $amount: 25%);
+    }
+    @media (max-width : $max-mobile) {
+        width: 100%;
+        margin: 10px  0;
+    }
+    p{
+        color: $p-color;
+        font-size: 3vw;
+        text-align: center;
+        line-height: $card-hieght;
+        font-family: monospace;
+        @media (max-width : $max-mobile) {
+            font-size: 7vw;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+.carde-1{
+    @include card-style($color-card-1, darken($color-card-1 , 25%) , $main-color);
+}
+.carde-2{
+    @include card-style($color-card-2, darken($color-card-2 , 25%) , $main-color);
+}
+.carde-3{
+    @include card-style($color-card-3, darken($color-card-3 , 25%) , $main-color);
+}
+.carde-4{
+    @include card-style($color-card-4, darken($color-card-4 , 25%) , $main-color);
+}
+
+
+// @for $i from 1 through 4 {
+//     .carde-#{$i} {
+//         @include card-style($color-card-1, darken($color-card-4 , 25%) , $main-color);
+//     }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:767px){}
+@media(min-width:768px){}
+@media(min-width:992){}
+@media(min-width:1200){}

@@ -1,0 +1,44 @@
+@import '../variables/colors';
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+
+@mixin button-bg($color) {
+  &:hover {
+    background:darken($color,8%);
+  }
+  &:active {
+    background:darken($color,25%);
+  } 
+  &:focus{
+    background: $color;
+  }
+}
+
+.button {
+  background-color: $button-color-2;
+  border-radius: 15px;
+  border: 2px $background-color solid;
+  font-weight: bolder;
+  font-size: 1.5vw;
+  text-decoration:none;
+  width: 15vw;
+  padding:5px 5px;
+  margin: 2px 5px;
+  font-family: 'Poiret One', cursive;
+}
+
+.button-primary {
+  @include button-bg($button-color-2);
+}
+
+.button-primary-dark {
+  @include button-bg($button-color);
+}
+
+.button-secondary{
+  @include button-bg($button-color);
+}
+
+.button-secondary-dark {
+  @include button-bg($button-color);
+}
+

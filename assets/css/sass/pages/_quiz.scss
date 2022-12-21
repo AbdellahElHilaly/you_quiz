@@ -1,0 +1,17 @@
+@import '../variables/colors';
+@import '../components/progress';
+@import '../components/card';
+@import '../components/quistion-title.scss';
+@import '../components/progress-title';
+
+
+.quiz-body{
+    padding: $body-pading;
+    background-color: #EE9520;
+    min-height: 100vh;
+    font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+    @media (max-width : $max-mobile) {
+        padding: 10px;
+    }
+}
+
