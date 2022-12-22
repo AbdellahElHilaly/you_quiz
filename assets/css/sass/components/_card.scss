@@ -9,11 +9,15 @@
         text-align: center;
     }
     div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
         position: relative;
         iconify-icon{
+            display: none;
             position: absolute;
-            top: O;
             right: 0;
+            align-self: flex-start;
             margin-top: 3px;
             margin-right: 3px;
             font-size: 3vw;
@@ -40,16 +44,16 @@
     }
     @media (max-width : $max-mobile) {
         width: 100%;
+        min-height: 150px;
         margin: 10px  0;
     }
     p{
+        margin: 0 7px;
         color: $p-color;
-        font-size: 3vw;
-        text-align: center;
-        line-height: $card-hieght;
+        font-size: 1.5vw;
         font-family: monospace;
         @media (max-width : $max-mobile) {
-            font-size: 7vw;
+            font-size: 5vw;
         }
     }
 }

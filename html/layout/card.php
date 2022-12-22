@@ -9,19 +9,19 @@
     <div class="carde-2">
         <iconify-icon icon="mdi:checkbox-marked-circle-plus-outline" ></iconify-icon>
         <p>
-            reppons
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque error.
         </p>
     </div>
     <div class="carde-3">
         <iconify-icon icon="mdi:checkbox-marked-circle-plus-outline" ></iconify-icon>
         <p>
-            reppons
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque error.
         </p>
     </div>
     <div class="carde-4">
         <iconify-icon icon="mdi:checkbox-marked-circle-plus-outline" ></iconify-icon>
         <p>
-            reppons
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque error.
         </p>
     </div>
 </div>

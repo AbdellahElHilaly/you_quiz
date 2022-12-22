@@ -13,27 +13,27 @@ let sectionResult = document.getElementById('quiz-section-id');
 
 let setionTitle = document.getElementById('progress-barr-title-id');
 
-bar_1.style.backgroundColor = "black";
+bar_1.style.backgroundColor = "#00214d";
 function chancheContent(indis){
     if(indis == 1){
-        bar_1.style.backgroundColor = "black";
-        bar_2.style.backgroundColor = "#ff5470";
-        bar_3.style.backgroundColor = "#ff5470";
+        bar_1.style.backgroundColor = "#00214d";
+        bar_2.style.backgroundColor = "#00ebc7";
+        bar_3.style.backgroundColor = "#00ebc7";
         sectionQuiz.style.display = "none";
         setionTitle.innerText = "Documentation";
     }
     else if(indis == 2){
-        bar_1.style.backgroundColor = "black";
-        bar_2.style.backgroundColor = "black";
-        bar_3.style.backgroundColor = "#ff5470";
+        bar_1.style.backgroundColor = "#00214d";
+        bar_2.style.backgroundColor = "#00214d";
+        bar_3.style.backgroundColor = "#00ebc7";
         sectionQuiz.style.display = "block";
         setionTitle.innerText = "Quiz";
 
     }
     else{
-        bar_1.style.backgroundColor = "black";
-        bar_2.style.backgroundColor = "black";
-        bar_3.style.backgroundColor = "black";
+        bar_1.style.backgroundColor = "#00214d";
+        bar_2.style.backgroundColor = "#00214d";
+        bar_3.style.backgroundColor = "#00214d";
         sectionQuiz.style.display = "none";
         setionTitle.innerText = "Result";
 
