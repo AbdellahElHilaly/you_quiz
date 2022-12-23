@@ -1,18 +1,28 @@
 @import '../variables/colors';
 @import '../variables/sizing';
 .card-containere{
-    margin-top: $margin-top;
+    // margin-top: $margin-top;
     display: flex;
     justify-content: space-between;
     @media (max-width : $max-mobile) {
         display: block;
         text-align: center;
     }
-    div{
+    .card{
         display: flex;
         align-items: center;
         justify-content: center;
         position: relative;
+
+        width: 22vw;
+        height: $card-hieght;
+
+        @media (max-width : $max-mobile) {
+            width: 100%;
+            min-height: 150px;
+            margin: 10px  0;
+        }
+
         iconify-icon{
             display: none;
             position: absolute;
@@ -26,12 +36,27 @@
                 font-size: 7vw;
             }
         }
+
+        p{
+            margin: 0 7px;
+            color: $main-color;
+            font-size: 1.5vw;
+            font-family: monospace;
+            @media (max-width : $max-mobile) {
+                font-size: 5vw;
+            }
+        }
+
+        button{
+            border: none;
+            background-color: rgba(255, 222, 173, 0);
+            width: 90%;
+            height: 90%;
+        }
     }
 }
 
-@mixin card-style($color , $border , $p-color){
-    width: 22vw;
-    height: $card-hieght;
+@mixin card-style($color , $border){
     border: 4px $border solid;
     border-radius: 15px;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
@@ -42,20 +67,14 @@
     &:active{
         background-color: darken($color: $color, $amount: 25%);
     }
-    @media (max-width : $max-mobile) {
-        width: 100%;
-        min-height: 150px;
-        margin: 10px  0;
-    }
-    p{
-        margin: 0 7px;
-        color: $p-color;
-        font-size: 1.5vw;
-        font-family: monospace;
-        @media (max-width : $max-mobile) {
-            font-size: 5vw;
-        }
-    }
+    
+    
+}
+@mixin card-animation-style($color1){
+    background-color: $color1;
+    border: 4px black solid;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 
@@ -69,17 +88,27 @@
 
 
 .carde-1{
-    @include card-style($color-card-1, darken($color-card-1 , 25%) , $main-color);
+    @include card-style($color-card-1, darken($color-card-1 , 25%) );
 }
 .carde-2{
-    @include card-style($color-card-2, darken($color-card-2 , 25%) , $main-color);
+    @include card-style($color-card-2, darken($color-card-2 , 25%) );
 }
 .carde-3{
-    @include card-style($color-card-3, darken($color-card-3 , 25%) , $main-color);
+    @include card-style($color-card-3, darken($color-card-3 , 25%) );
 }
 .carde-4{
-    @include card-style($color-card-4, darken($color-card-4 , 25%) , $main-color);
+    @include card-style($color-card-4, darken($color-card-4 , 25%) );
 }
+.carde-animation-correct{
+    @include card-animation-style(green);
+}
+.carde-animation-false{
+    @include card-animation-style(red );
+}
+.carde-animation-sleep{
+    @include card-animation-style(gray);
+}
+
 
 
 // @for $i from 1 through 4 {

@@ -1,26 +1,26 @@
 
 
-<?php include_once '../inc/hed.php' ?>
+<?php include_once '../../html/inc/hed.php'?>
 
-<div class="quiz-body">
-    <?php include_once '../layout/progres-bar-1.php'?>
-
-    <section id="quiz-section-id">
+<div class="quiz-body" id="quiz-body-id">
+    <section>
         <div class="quistion-container">
-            <p>
+            <p id="text-question-id">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem, accusamus! Perspiciatis voluptatibus sed explicabo quaerat impedit non neque, placeat enim deserunt quam saepe praesentium earum! Veritatis quae ullam labore deserunt.
             </p>
         </div>
         <?php include_once '../layout/card.php'?>
         <?php include_once '../layout/time-bar.php'?>
-
-        
-
     </section>
-
-    
-
-
 </div>
+<script src="../../js/classes/question.js"></script>
+<script src="../../js/data/data.js"></script>
+<script src="../../js/quize/show.js"></script>
+<script src="../../js/quize/time-bar.js"></script>
+<script src="../../js/helper/functions.js"></script>
+<script src="../../js/quize/play.js"></script>
+<script src="../../js/quize/animation.js"></script>
+<script src="../../js/quize/result.js"></script>
+<script src="../../js/quize/game-over.js"></script>
 
-<script src="../../js/progress-title.js"></script>
+

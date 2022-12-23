@@ -1,4 +1,8 @@
 @import '../variables/sizing';
 .quistion-container{
     @include text-style();
+    min-height: 15vh;
+    @media (max-width : $max-mobile) {
+        min-height: 12vh;
+    }
 }

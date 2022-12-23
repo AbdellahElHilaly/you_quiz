@@ -1,0 +1,18 @@
+@import '../variables/colors';
+@import '../components/card';
+@import '../components/quistion-title.scss';
+@import '../components/progress-title';
+@import '../components/time-bar';
+body{
+    background-color: #EE9520;
+}
+.page-container{
+    padding: $body-pading;
+    // background-color: #EE9520;
+    // min-height: 100vmin;
+    font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+    @media (max-width : $max-mobile) {
+        padding: 10px;
+    }
+}
+

@@ -1,20 +1,19 @@
-let start = document.getElementById('start');
-let end = document.getElementById('end');
+let idAnimaion;
 
-function move(deley) {
+function moveBarTime(deley) {
     let barTime = document.getElementById("BarTime");
+    barTime.style.backgroundColor = "#00ebc7";
     let width = 100;
     let smout = 0.01;
-    if(deley <10) smout = 0.1;
+    if(deley <=10) smout = 0.1;
+    if(deley <=5) smout = 1;
 
     newDellay = (deley*1000*smout)/100;
-    console.log(newDellay);
-    
-    let id = setInterval(frame, newDellay);
+    clearInterval(idAnimaion);
+    idAnimaion = setInterval(frame, newDellay);
     function frame() {
         if (width <=0) {
-            alert("end time");
-            clearInterval(id);
+            clearInterval(idAnimaion);
             i = 0;
         } else {
             width-=smout;
@@ -24,4 +23,3 @@ function move(deley) {
         }
     }
 }
-move(30);

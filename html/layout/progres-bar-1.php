@@ -1,6 +1,6 @@
-<p class="progress-barr-title" id="progress-barr-title-id" >Documentation</p>
+<p class="progress-barr-title" id="progress-barr-title-id" >Informations</p>
 <div class="progress-bar-container ">
-    <div class="bar" id="bar-1-id"></div>
+    <div class="bar d-none" id="bar-1-id"></div>
         <div onclick="chancheContent(1)" class="circle-container">
             <div  class="circle" id="circle-1-id">1</div>
         </div>

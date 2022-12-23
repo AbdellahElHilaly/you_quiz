@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Poiret+One);
 footer {
-  background-color: #ff5470;
+  background-color: #00214d;
   color: white;
 }
 
@@ -97,8 +97,11 @@ header .titlel h5 {
   font-size: 2vw;
 }
 
+.quiz-body {
+  font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+
 .card-containere {
-  margin-top: 40px;
   display: flex;
   justify-content: space-between;
 }
@@ -108,13 +111,22 @@ header .titlel h5 {
     text-align: center;
   }
 }
-.card-containere div {
+.card-containere .card {
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  width: 22vw;
+  height: 13vw;
 }
-.card-containere div iconify-icon {
+@media (max-width: 767px) {
+  .card-containere .card {
+    width: 100%;
+    min-height: 150px;
+    margin: 10px 0;
+  }
+}
+.card-containere .card iconify-icon {
   display: none;
   position: absolute;
   right: 0;
@@ -125,14 +137,29 @@ header .titlel h5 {
   color: black;
 }
 @media (max-width: 767px) {
-  .card-containere div iconify-icon {
+  .card-containere .card iconify-icon {
     font-size: 7vw;
   }
 }
+.card-containere .card p {
+  margin: 0 7px;
+  color: #fffffe;
+  font-size: 1.5vw;
+  font-family: monospace;
+}
+@media (max-width: 767px) {
+  .card-containere .card p {
+    font-size: 5vw;
+  }
+}
+.card-containere .card button {
+  border: none;
+  background-color: rgba(255, 222, 173, 0);
+  width: 90%;
+  height: 90%;
+}
 
 .carde-1 {
-  width: 22vw;
-  height: 13vw;
   border: 4px #d40023 solid;
   border-radius: 15px;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
@@ -144,28 +171,8 @@ header .titlel h5 {
 .carde-1:active {
   background-color: #d40023;
 }
-@media (max-width: 767px) {
-  .carde-1 {
-    width: 100%;
-    min-height: 150px;
-    margin: 10px 0;
-  }
-}
-.carde-1 p {
-  margin: 0 7px;
-  color: #fffffe;
-  font-size: 1.5vw;
-  font-family: monospace;
-}
-@media (max-width: 767px) {
-  .carde-1 p {
-    font-size: 5vw;
-  }
-}
 
 .carde-2 {
-  width: 22vw;
-  height: 13vw;
   border: 4px #006c5b solid;
   border-radius: 15px;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
@@ -177,28 +184,8 @@ header .titlel h5 {
 .carde-2:active {
   background-color: #006c5b;
 }
-@media (max-width: 767px) {
-  .carde-2 {
-    width: 100%;
-    min-height: 150px;
-    margin: 10px 0;
-  }
-}
-.carde-2 p {
-  margin: 0 7px;
-  color: #fffffe;
-  font-size: 1.5vw;
-  font-family: monospace;
-}
-@media (max-width: 767px) {
-  .carde-2 p {
-    font-size: 5vw;
-  }
-}
 
 .carde-3 {
-  width: 22vw;
-  height: 13vw;
   border: 4px #012e62 solid;
   border-radius: 15px;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
@@ -210,28 +197,8 @@ header .titlel h5 {
 .carde-3:active {
   background-color: #012e62;
 }
-@media (max-width: 767px) {
-  .carde-3 {
-    width: 100%;
-    min-height: 150px;
-    margin: 10px 0;
-  }
-}
-.carde-3 p {
-  margin: 0 7px;
-  color: #fffffe;
-  font-size: 1.5vw;
-  font-family: monospace;
-}
-@media (max-width: 767px) {
-  .carde-3 p {
-    font-size: 5vw;
-  }
-}
 
 .carde-4 {
-  width: 22vw;
-  height: 13vw;
   border: 4px #655601 solid;
   border-radius: 15px;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
@@ -243,23 +210,26 @@ header .titlel h5 {
 .carde-4:active {
   background-color: #655601;
 }
-@media (max-width: 767px) {
-  .carde-4 {
-    width: 100%;
-    min-height: 150px;
-    margin: 10px 0;
-  }
+
+.carde-animation-correct {
+  background-color: green;
+  border: 4px black solid;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
-.carde-4 p {
-  margin: 0 7px;
-  color: #fffffe;
-  font-size: 1.5vw;
-  font-family: monospace;
+
+.carde-animation-false {
+  background-color: red;
+  border: 4px black solid;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
-@media (max-width: 767px) {
-  .carde-4 p {
-    font-size: 5vw;
-  }
+
+.carde-animation-sleep {
+  background-color: gray;
+  border: 4px black solid;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 .quistion-container {
@@ -268,11 +238,17 @@ header .titlel h5 {
   color: black;
   font-family: monospace;
   font-weight: bolder;
+  min-height: 15vh;
 }
 @media (max-width: 767px) {
   .quistion-container {
     padding-top: 10px;
     font-size: 4vw;
+  }
+}
+@media (max-width: 767px) {
+  .quistion-container {
+    min-height: 12vh;
   }
 }
 
@@ -373,12 +349,12 @@ body {
   background-color: #EE9520;
 }
 
-.quiz-body {
+.page-container {
   padding: 0 40px;
   font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 }
 @media (max-width: 767px) {
-  .quiz-body {
+  .page-container {
     padding: 10px;
   }
 }
@@ -389,11 +365,17 @@ body {
   color: black;
   font-family: monospace;
   font-weight: bolder;
+  min-height: 15vh;
 }
 @media (max-width: 767px) {
   .quistion-container {
     padding-top: 10px;
     font-size: 4vw;
+  }
+}
+@media (max-width: 767px) {
+  .quistion-container {
+    min-height: 12vh;
   }
 }
 

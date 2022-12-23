@@ -1,27 +1,34 @@
-<link rel="stylesheet" href="../../assets/css/main.css">
 <div class="card-containere">
-    <div class="carde-1">
-        <iconify-icon icon="mdi:checkbox-marked-circle-plus-outline" ></iconify-icon>
-        <p>
-            reppons
+    <card class="card carde-1">
+        <button class="card-button">
+            <iconify-icon icon="mdi:checkbox-marked-circle-plus-outline" ></iconify-icon>
+            <p class="card-text">
+                reppons
         </p>
-    </div>
-    <div class="carde-2">
-        <iconify-icon icon="mdi:checkbox-marked-circle-plus-outline" ></iconify-icon>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque error.
-        </p>
-    </div>
-    <div class="carde-3">
-        <iconify-icon icon="mdi:checkbox-marked-circle-plus-outline" ></iconify-icon>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque error.
-        </p>
-    </div>
-    <div class="carde-4">
-        <iconify-icon icon="mdi:checkbox-marked-circle-plus-outline" ></iconify-icon>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque error.
-        </p>
-    </div>
+        </button>
+    </card>
+    <card class="card carde-2">
+        <button class="card-button">
+            <iconify-icon icon="mdi:checkbox-marked-circle-plus-outline" ></iconify-icon>
+            <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque error.
+            </p>
+        </button>
+    </card>
+    <card class="card carde-3">
+        <button class="card-button">
+            <iconify-icon icon="mdi:checkbox-marked-circle-plus-outline" ></iconify-icon>
+            <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque error.
+            </p>
+        </button>
+    </card>
+    <card class="card carde-4">
+        <button class="card-button">
+            <iconify-icon icon="mdi:checkbox-marked-circle-plus-outline" ></iconify-icon>
+            <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque error.
+            </p>
+        </button>
+    </card>
 </div>
