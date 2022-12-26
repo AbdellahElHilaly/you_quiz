@@ -8,4 +8,5 @@ function remply(index){
     for(let cardText of cardTexts){
         cardText.innerText= questions[index].repons[i++];
     }
+    
 }

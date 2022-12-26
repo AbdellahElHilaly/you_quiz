@@ -1,0 +1,11 @@
+.documentation-body{
+    margin-top: 5vh;
+    li{
+        @include text-style();
+        text-align: start;
+        font-size: 2vw;
+        @media (max-width : $max-mobile){
+            font-size: 6vw;
+        }
+    }
+}

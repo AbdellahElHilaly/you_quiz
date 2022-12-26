@@ -1,0 +1,23 @@
+.resulte-body{
+    @include text-style();
+    margin-top: 2vh;
+    text-align: start;
+    .result{
+        color: $strock-color;
+    }
+    .question-container{
+    margin-top: 2vh;
+        display: flex;
+        .index{
+            background-color: green;
+        }
+        .question{
+            margin-left: 2vw;
+        }
+    }
+
+    .responce-container{
+        margin-top: 2vh;
+        display: flex;
+    }
+}

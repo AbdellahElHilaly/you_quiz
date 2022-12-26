@@ -1,6 +1,6 @@
 let idAnimaion;
 
-function moveBarTime(deley) {
+function moveBarTime(deley , index) {
     let barTime = document.getElementById("BarTime");
     barTime.style.backgroundColor = "#00ebc7";
     let width = 100;
@@ -10,11 +10,12 @@ function moveBarTime(deley) {
 
     newDellay = (deley*1000*smout)/100;
     clearInterval(idAnimaion);
-    idAnimaion = setInterval(frame, newDellay);
+    idAnimaion = setInterval(frame, newDellay);    
     function frame() {
         if (width <=0) {
+            wrongRespons(index);
             clearInterval(idAnimaion);
-            i = 0;
+            nextQuestion();
         } else {
             width-=smout;
             barTime.style.width = width + "%";

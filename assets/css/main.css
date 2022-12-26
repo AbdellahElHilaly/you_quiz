@@ -81,6 +81,33 @@ nav .nav-link:focus {
   background: #00ebc7;
 }
 
+.button-start-quize {
+  background-color: orangered;
+  width: 10vw;
+  height: auto;
+  text-align: center;
+  font-size: 2vw;
+  color: black;
+  font-family: monospace;
+  font-weight: bolder;
+  border-radius: 10px;
+  border: 5px #00214d solid;
+  margin-top: 25vh;
+}
+@media (max-width: 767px) {
+  .button-start-quize {
+    padding-top: 10px;
+    font-size: 5vw;
+  }
+}
+.button-start-quize:hover {
+  background-color: #e63e00;
+}
+.button-start-quize:active {
+  background-color: #b33000;
+  border-color: #fffffe;
+}
+
 header .mask {
   background-color: rgba(0, 0, 0, 0.068);
 }
@@ -99,6 +126,7 @@ header .titlel h5 {
 
 .quiz-body {
   font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+  text-align: center;
 }
 
 .card-containere {
@@ -243,7 +271,7 @@ header .titlel h5 {
 @media (max-width: 767px) {
   .quistion-container {
     padding-top: 10px;
-    font-size: 4vw;
+    font-size: 5vw;
   }
 }
 @media (max-width: 767px) {
@@ -262,7 +290,7 @@ header .titlel h5 {
 @media (max-width: 767px) {
   .progress-barr-title {
     padding-top: 10px;
-    font-size: 4vw;
+    font-size: 5vw;
   }
 }
 @media (max-width: 767px) {
@@ -370,13 +398,70 @@ body {
 @media (max-width: 767px) {
   .quistion-container {
     padding-top: 10px;
-    font-size: 4vw;
+    font-size: 5vw;
   }
 }
 @media (max-width: 767px) {
   .quistion-container {
     min-height: 12vh;
   }
+}
+
+.documentation-body {
+  margin-top: 5vh;
+}
+.documentation-body li {
+  text-align: center;
+  font-size: 2vw;
+  color: black;
+  font-family: monospace;
+  font-weight: bolder;
+  text-align: start;
+  font-size: 2vw;
+}
+@media (max-width: 767px) {
+  .documentation-body li {
+    padding-top: 10px;
+    font-size: 5vw;
+  }
+}
+@media (max-width: 767px) {
+  .documentation-body li {
+    font-size: 6vw;
+  }
+}
+
+.resulte-body {
+  text-align: center;
+  font-size: 2vw;
+  color: black;
+  font-family: monospace;
+  font-weight: bolder;
+  margin-top: 2vh;
+  text-align: start;
+}
+@media (max-width: 767px) {
+  .resulte-body {
+    padding-top: 10px;
+    font-size: 5vw;
+  }
+}
+.resulte-body .result {
+  color: #00214d;
+}
+.resulte-body .question-container {
+  margin-top: 2vh;
+  display: flex;
+}
+.resulte-body .question-container .index {
+  background-color: green;
+}
+.resulte-body .question-container .question {
+  margin-left: 2vw;
+}
+.resulte-body .responce-container {
+  margin-top: 2vh;
+  display: flex;
 }
 
 * {

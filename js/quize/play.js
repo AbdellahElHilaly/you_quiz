@@ -1,45 +1,62 @@
 let buttonCards = document.getElementsByClassName('card-button');
+let btnStartQuiz = document.getElementById('btn-start-quiz');
+let quizPage = document.getElementById('quiz-page');
 let questionIndex = 0;
+quizPage.style.display = "none";
+btnStartQuiz.addEventListener('click', async () => {
+    btnStartQuiz.style.display = "none";
+    quizPage.style.display = "block";
+    play();
+});
 
 questions = shuffleObjArray(questions);
 
 
 
-
-play();
 function play(){
-    remply(questionIndex);
-    moveBarTime(getDely(questionIndex));
-    
+    nextQuestion();
     for(let i=0 ; i<buttonCards.length ; i++){
         buttonCards[i].addEventListener('click', async () => {
-            for(btn of buttonCards) btn.disabled = true;
             clearInterval(idAnimaion);
             reponsAnimation(i , questionIndex);
+
+            sleep(1000).then(() => {
+                nextQuestion();
+            });
             
-            if(questionIndex<9) {
-                sleep(1000).then(() => {
-                    remply(++questionIndex);
-                    moveBarTime(getDely(questionIndex));
-                    for(btn of buttonCards) btn.disabled = false;
-                    for(let j=0 ; j<4 ; j++) cards[j].setAttribute("class", 'card carde-'+(j+1));
-                    
-                });
-            }
-            else{
-                gameOver();
-            }
         });
     }
 }
 
 function reponsAnimation(i , index){
-    if(i == questions[index].R_C_Indis){
-        animationCard(i , true);
-        calculeResult();
+    index--;
+        if(i == questions[index].R_C_Indis){
+            animationCard(i , true);
+            calculeResult();
+        }
+        else {
+            wrongRespons(index);
+            animationCard(questions[index].R_C_Indis);
+            showFalseRepons(i);
+        }
+}
+
+
+function nextQuestion(){
+    if(questionIndex < questions.length ) {
+        remply(questionIndex);
+        moveBarTime(getDely(questionIndex) , questionIndex);
+        activeCards();
+        questionIndex++;
     }
-    else {
-        animationCard(questions[index].R_C_Indis);
-        showFalseRepons(i);
+    else{
+        gameOver();
     }
 }
+function activeCards(){
+    for(btn of buttonCards) btn.disabled = false;
+    for(let j=0 ; j<4 ; j++) cards[j].setAttribute("class", 'card carde-'+(j+1));
+}
+
+
+

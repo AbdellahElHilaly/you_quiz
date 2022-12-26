@@ -21,8 +21,9 @@ function animationCard(index){ // crads content repons correct be green
     
 }
 
-function sleepCards(cards){ // all cards be gray 
+function sleepCards(){ // all cards be gray 
     for(let card of cards) card.setAttribute("class", "card carde-animation-sleep");
+    for(btn of buttonCards) btn.disabled = true;
 }
 
 function showFalseRepons(index){ // change color of cards (red)
