@@ -2,22 +2,52 @@
     @include text-style();
     margin-top: 2vh;
     text-align: start;
-    .result{
-        color: $strock-color;
-    }
-    .question-container{
-    margin-top: 2vh;
-        display: flex;
-        .index{
-            background-color: green;
+    .result-container{
+        background-color: rgba(115, 255, 0, 0.311);
+        .result{
+            color: $strock-color;
         }
-        .question{
-            margin-left: 2vw;
+    
+        .question-container{
+            margin-top: 2vh;
+            padding-right: 2vw;
+            display: flex;
+            .index{
+                background-color: green;
+                margin-left: 2vw;
+            }
+            .question{
+                margin-left: 2vw;
+            }
         }
-    }
+    
+        .responce-container{
+            margin-top: .5vh;
+            padding-right: 2vw;
+            display: flex;
+            
+            iconify-icon{
+                width: 3vw;
+                margin: 1.25vh 2vw;
+                @media (max-width : $max-mobile) {
+                    width: 15vw;
+                    margin-top: 1vh;
 
-    .responce-container{
-        margin-top: 2vh;
-        display: flex;
+
+                }
+            }
+        }
+        
+        .line{
+            background-color: $strock-color;
+            height: 2px;
+            width: 100%;
+
+        }
     }
+    
+
+
+    
+    
 }

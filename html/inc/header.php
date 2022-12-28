@@ -30,7 +30,7 @@ style="background-image: url('https://assets.aboutamazon.com/dims4/default/4c30e
                 <div class="">
                     <h1 class="mb-3">You Quiz</h1>
                     <h5 class="mb-4">You code sprint-3 brief-2</h5>
-                    <button  class="button button-primary btn  btn-light" data-mdb-ripple-color="dark">Let's Go</button>
+                    <button  class="button button-primary btn  btn-light"   data-mdb-ripple-color="dark"><a href="page/page-container.php">Let's Go</a></button>
                     <button  class="button button-primary btn  btn-light " data-mdb-ripple-color="dark">Singn IN</button>
                     <button  class="button button-primary btn  btn-light " data-mdb-ripple-color="dark">Sign UP</button>
                 </div>

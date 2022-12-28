@@ -12,7 +12,6 @@ class Question{
         this.#R_C_Indis = reponsIndex;
         this.#corectRepons = corectRepons;
         this.#deficulty = deficulty ; //Math.ceil(Math.random() * (5 - 1) + 1);
-        
     }
 
     get question(){

@@ -13,6 +13,7 @@
         <?php include_once '../layout/time-bar.php'?>
     </section>
 </div>
+<script src="../../js/helper/variable.js"></script>
 <script src="../../js/classes/question.js"></script>
 <script src="../../js/data/data.js"></script>
 <script src="../../js/quize/show.js"></script>

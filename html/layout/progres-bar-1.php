@@ -12,4 +12,7 @@
         <div onclick="chancheContent(3)" class="circle-container">
             <div  class="circle" id="circle-3-id">3</div>
         </div>
+    <iconify-icon id="sound-on-id" icon="mdi:music"></iconify-icon>
+    <iconify-icon id="sound-off-id" icon="mdi:music-off"></iconify-icon>
+    
 </div>

@@ -6,6 +6,7 @@
     }
 }
 .progress-bar-container{
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,6 +16,17 @@
         background-color: $color-primary;
         width: 15vw;
         height: 6px;
+    }
+
+    iconify-icon{
+        color: $strock-color;
+        font-size:4vw;
+        position: absolute;
+        right:0;
+        @media (max-width : $max-mobile){
+            font-size: 8vw;
+        }
+
     }
     
 }

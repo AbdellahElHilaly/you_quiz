@@ -83,7 +83,7 @@ nav .nav-link:focus {
 
 .button-start-quize {
   background-color: orangered;
-  width: 10vw;
+  min-width: 10vw;
   height: auto;
   text-align: center;
   font-size: 2vw;
@@ -107,6 +107,22 @@ nav .nav-link:focus {
   background-color: #b33000;
   border-color: #fffffe;
 }
+@media (max-width: 767px) {
+  .button-start-quize {
+    min-width: 30vw;
+  }
+}
+
+.try-agin {
+  margin: 0;
+  padding: 0;
+  font-size: 1.25vw;
+}
+@media (max-width: 767px) {
+  .try-agin {
+    font-size: 3.25vw;
+  }
+}
 
 header .mask {
   background-color: rgba(0, 0, 0, 0.068);
@@ -122,6 +138,13 @@ header .titlel h1 {
 }
 header .titlel h5 {
   font-size: 2vw;
+}
+header .titlel button {
+  color: #00214d;
+}
+header .titlel a {
+  text-decoration: none;
+  color: #00214d;
 }
 
 .quiz-body {
@@ -144,13 +167,14 @@ header .titlel h5 {
   align-items: center;
   justify-content: center;
   position: relative;
+  padding: 10px 0;
   width: 22vw;
-  height: 13vw;
+  min-height: 13vw;
 }
 @media (max-width: 767px) {
   .card-containere .card {
     width: 100%;
-    min-height: 150px;
+    min-height: 100px;
     margin: 10px 0;
   }
 }
@@ -300,6 +324,7 @@ header .titlel h5 {
 }
 
 .progress-bar-container {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -310,6 +335,17 @@ header .titlel h5 {
   background-color: #00ebc7;
   width: 15vw;
   height: 6px;
+}
+.progress-bar-container iconify-icon {
+  color: #00214d;
+  font-size: 4vw;
+  position: absolute;
+  right: 0;
+}
+@media (max-width: 767px) {
+  .progress-bar-container iconify-icon {
+    font-size: 8vw;
+  }
 }
 
 .circle-container {
@@ -362,7 +398,7 @@ header .titlel h5 {
   display: flex;
   align-items: center;
   width: 100%;
-  height: 20px;
+  height: 15px;
   background-color: #00214d;
   margin-top: 30px;
 }
@@ -446,24 +482,308 @@ body {
     font-size: 5vw;
   }
 }
-.resulte-body .result {
+.resulte-body .result-container {
+  background-color: rgba(115, 255, 0, 0.311);
+}
+.resulte-body .result-container .result {
   color: #00214d;
 }
-.resulte-body .question-container {
+.resulte-body .result-container .question-container {
   margin-top: 2vh;
+  padding-right: 2vw;
   display: flex;
 }
-.resulte-body .question-container .index {
+.resulte-body .result-container .question-container .index {
   background-color: green;
-}
-.resulte-body .question-container .question {
   margin-left: 2vw;
 }
-.resulte-body .responce-container {
-  margin-top: 2vh;
+.resulte-body .result-container .question-container .question {
+  margin-left: 2vw;
+}
+.resulte-body .result-container .responce-container {
+  margin-top: 0.5vh;
+  padding-right: 2vw;
   display: flex;
 }
+.resulte-body .result-container .responce-container iconify-icon {
+  width: 3vw;
+  margin: 1.25vh 2vw;
+}
+@media (max-width: 767px) {
+  .resulte-body .result-container .responce-container iconify-icon {
+    width: 15vw;
+    margin-top: 1vh;
+  }
+}
+.resulte-body .result-container .line {
+  background-color: #00214d;
+  height: 2px;
+  width: 100%;
+}
 
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.demo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 500px;
+  height: 140px;
+  margin-top: -70px;
+  padding: 10px;
+  border-radius: 20px;
+  transform: translateX(-50%);
+}
+.demo__colored-blocks {
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 500px;
+  height: 100%;
+  margin-left: -250px;
+  padding: 10px;
+  border-radius: 20px;
+  perspective: 1000px;
+  -webkit-animation: demoAnim 4s ease-in-out infinite, contAnim 4s infinite;
+          animation: demoAnim 4s ease-in-out infinite, contAnim 4s infinite;
+}
+.demo__colored-blocks-rotater {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  -webkit-animation: rotation 1.3s linear infinite;
+          animation: rotation 1.3s linear infinite;
+}
+.demo__colored-blocks-inner {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  background: #32386D;
+  border-radius: inherit;
+}
+.demo__colored-block {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 300%;
+  height: 300%;
+  transform-origin: 0 0;
+}
+.demo__colored-block:nth-child(1) {
+  transform: rotate(0deg) skewX(-30deg);
+  background-color: #FD3359;
+}
+.demo__colored-block:nth-child(2) {
+  transform: rotate(120deg) skewX(-30deg);
+  background-color: #F4D302;
+}
+.demo__colored-block:nth-child(3) {
+  transform: rotate(240deg) skewX(-30deg);
+  background-color: #21BDFF;
+}
+.demo__inner {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.demo__numbers {
+  overflow: visible;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+}
+.demo__numbers-path {
+  fill: none;
+  stroke-width: 10px;
+  stroke: #fff;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 0, 518.055065155;
+  stroke-dashoffset: 0;
+  -webkit-animation: numAnim 4s ease-in-out infinite;
+          animation: numAnim 4s ease-in-out infinite;
+  opacity: 0;
+}
+.demo__text {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 500px;
+  height: 100%;
+  margin-left: -250px;
+  text-align: center;
+  line-height: 140px;
+  font-size: 100px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 15px;
+  transform: translateX(10px);
+  -webkit-animation: hideText 4s infinite;
+          animation: hideText 4s infinite;
+}
+
+@-webkit-keyframes contAnim {
+  15%, 100% {
+    margin-left: -250px;
+    width: 500px;
+  }
+  25%, 90% {
+    margin-left: -70px;
+    width: 140px;
+  }
+}
+
+@keyframes contAnim {
+  15%, 100% {
+    margin-left: -250px;
+    width: 500px;
+  }
+  25%, 90% {
+    margin-left: -70px;
+    width: 140px;
+  }
+}
+@-webkit-keyframes numAnim {
+  15% {
+    stroke-dasharray: 0, 518.055065155;
+    stroke-dashoffset: 0;
+    opacity: 0;
+  }
+  25%, 41% {
+    opacity: 1;
+    stroke-dasharray: 144.4256591797, 518.055065155;
+    stroke-dashoffset: -40;
+  }
+  53%, 66% {
+    stroke-dasharray: 136.0216217041, 518.055065155;
+    stroke-dashoffset: -227.238697052;
+  }
+  76% {
+    stroke-dasharray: 113.4751205444, 518.055065155;
+    stroke-dashoffset: -445.8995704651;
+  }
+  88%, 100% {
+    stroke-dasharray: 72.1554946899, 518.055065155;
+    stroke-dashoffset: -445.8995704651;
+  }
+  92% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes numAnim {
+  15% {
+    stroke-dasharray: 0, 518.055065155;
+    stroke-dashoffset: 0;
+    opacity: 0;
+  }
+  25%, 41% {
+    opacity: 1;
+    stroke-dasharray: 144.4256591797, 518.055065155;
+    stroke-dashoffset: -40;
+  }
+  53%, 66% {
+    stroke-dasharray: 136.0216217041, 518.055065155;
+    stroke-dashoffset: -227.238697052;
+  }
+  76% {
+    stroke-dasharray: 113.4751205444, 518.055065155;
+    stroke-dashoffset: -445.8995704651;
+  }
+  88%, 100% {
+    stroke-dasharray: 72.1554946899, 518.055065155;
+    stroke-dashoffset: -445.8995704651;
+  }
+  92% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes rotation {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotation {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes demoAnim {
+  15% {
+    border-radius: 20px;
+    transform: rotate(0);
+  }
+  30%, 43% {
+    border-radius: 50%;
+    transform: rotate(360deg);
+  }
+  52%, 65% {
+    border-radius: 0;
+    transform: rotate(720deg);
+  }
+  78%, 90% {
+    border-radius: 50%;
+    transform: rotate(1080deg);
+  }
+  100% {
+    border-radius: 20px;
+    transform: rotate(1440deg);
+  }
+}
+@keyframes demoAnim {
+  15% {
+    border-radius: 20px;
+    transform: rotate(0);
+  }
+  30%, 43% {
+    border-radius: 50%;
+    transform: rotate(360deg);
+  }
+  52%, 65% {
+    border-radius: 0;
+    transform: rotate(720deg);
+  }
+  78%, 90% {
+    border-radius: 50%;
+    transform: rotate(1080deg);
+  }
+  100% {
+    border-radius: 20px;
+    transform: rotate(1440deg);
+  }
+}
+@-webkit-keyframes hideText {
+  15%, 100% {
+    opacity: 1;
+  }
+  20%, 96% {
+    opacity: 0;
+  }
+}
+@keyframes hideText {
+  15%, 100% {
+    opacity: 1;
+  }
+  20%, 96% {
+    opacity: 0;
+  }
+}
 * {
   margin: 0;
   box-sizing: border-box;

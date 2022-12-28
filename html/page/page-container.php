@@ -4,6 +4,7 @@
 <div class="page-container">
     <?php include_once '../layout/progres-bar-1.php'?>
     <?php include_once '../page/Informations.php'?>
+    <?php include_once '../layout/timer.php'?>
     <?php include_once '../page/quiz.php'?>
     <?php include_once '../page/resulte.php'?>
 </div>

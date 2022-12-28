@@ -13,13 +13,13 @@
         align-items: center;
         justify-content: center;
         position: relative;
-
+        padding:  10px 0;
         width: 22vw;
-        height: $card-hieght;
+        min-height: $card-hieght;
 
         @media (max-width : $max-mobile) {
             width: 100%;
-            min-height: 150px;
+            min-height: 100px;
             margin: 10px  0;
         }
 
